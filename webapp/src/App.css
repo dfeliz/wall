@@ -83,9 +83,13 @@
 }
 
 .footer-text {
-  color: white;
+  color: rgba(255, 255, 255, 0.295);
   font-size: 16px;
-  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer-text:hover {
+  color: rgba(255, 255, 255, 0.644);
 }
 
 .gif-grid {

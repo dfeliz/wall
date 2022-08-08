@@ -4,13 +4,12 @@ import { Program, AnchorProvider, web3 } from '@project-serum/anchor';
 
 import twitterLogo from './assets/twitter-logo.svg';
 import idl from './idl.json';
-import keyPair from './core/keypair.json';
 import './App.css';
 
 // SystemProgram is a reference to the Solana runtime!
 const { SystemProgram } = web3;
 
-const arr = Object.values(keyPair._keypair.secretKey)
+const arr = Object.values(JSON.parse(process.env.REACT_APP_KEY_PAIR)._keypair.secretKey)
 const secret = new Uint8Array(arr)
 const baseAccount = web3.Keypair.fromSecretKey(secret)
 
